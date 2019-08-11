@@ -18,7 +18,7 @@ function runAnimation( durationInFrames, currentFrame ) {
 			runAnimation( animationDurationInFrames, animationCurrentFrame );
 		});
 	} else {
-    animationCurrentFrame = 1;
+    		animationCurrentFrame = 1;
 	}
 }
 
