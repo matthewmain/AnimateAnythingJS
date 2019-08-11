@@ -9,18 +9,16 @@ var animationValue;
 var animationDurationInFrames = 60;
 var animationCurrentFrame = 1;
 
-function runAnimation( durationInFrames, currentFrame ) {
+function runAnimation() {
 	animationCurrentFrame++;
-	if ( currentFrame <= durationInFrames ) {
+	if ( animationCurrentFrame <= animationDurationInFrames ) {
 		window.requestAnimationFrame( ()=> { 
 			animationValue = AJS.easeOutBack( 0, 100, animationDurationInFrames, animationCurrentFrame );
 			svg.setAttribute("points", "0 " + animationValue + " 100 " + animationValue );
-			runAnimation( animationDurationInFrames, animationCurrentFrame );
+			runAnimation();
 		});
-	} else {
-    		animationCurrentFrame = 1;
-	}
+	} 
 }
 
-runAnimation( animationDurationInFrames, animationCurrentFrame );
+runAnimation();
 ```
