@@ -1,6 +1,6 @@
 # AnimateAnythingJS
 
-Animate any quantitative value by running any of the included animation styles on a loop until the animation is complete. Visualizations of each style can be found [here](https://easings.net/en) for reference.
+Animate any quantitative value by running one of the included animation styles on a loop until the animation is complete. Especially useful for animating SVG shapes. Visualizations of each animation style can be found [here](https://easings.net/en) for reference.
 
 ### Example
 
