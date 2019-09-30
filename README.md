@@ -7,14 +7,14 @@ Animate any quantitative value by running one of the included animation styles o
 ```
 var animationValue;
 var animationDurationInFrames = 60;
-var animationCurrentFrame = 1;
+var animationCurrentFrame = 0;
 
 function runAnimation() {
 	animationCurrentFrame++;
 	if ( animationCurrentFrame <= animationDurationInFrames ) {
 		window.requestAnimationFrame( ()=> { 
-			animationValue = AJS.easeOutBack( 0, 100, animationDurationInFrames, animationCurrentFrame );
-			svg.setAttribute("points", "0 " + animationValue + " 100 " + animationValue );
+			animationYValue = AJS.easeOutBack( 0, 100, animationDurationInFrames, animationCurrentFrame );
+			svg.setAttribute("points", "0 " + animationYValue + " 100 " + animationYValue );
 			runAnimation();
 		});
 	} 
