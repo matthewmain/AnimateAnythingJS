@@ -13,7 +13,7 @@ function runAnimation() {
 	animationCurrentFrame++;
 	if ( animationCurrentFrame <= animationDurationInFrames ) {
 		window.requestAnimationFrame( ()=> { 
-			animationValue = **AJS.easeOutBack( 0, 100, animationDurationInFrames, animationCurrentFrame )**;
+			animationValue = AJS.easeOutBack( 0, 100, animationDurationInFrames, animationCurrentFrame );
 			svg.setAttribute("points", "0 " + animationValue + " 100 " + animationValue );
 			runAnimation();
 		});
