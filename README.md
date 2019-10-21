@@ -6,17 +6,17 @@ Animate any quantitative value by running any of the included animation styles o
 ### Easing Options
 (Visualizations of each animation style can be found [here](https://easings.net/en) for reference.)
 
-linear			
-easeInQuad, easeOutQuad, easeInOutQuad
-easeInCubic, easeOutCubic, easeInOutCubic
-easeInQuart, easeOutQuart, easeInOutQuart
-easeInQuint, easeOutQuint, easeInOutQuint
-easeInSine, easeOutSine, easeInOutSine
-easeInExpo, easeOutExpo, easeInOutExpo
-easeInCirc, easeOutCirc, easeInOutCirc
-easeInElastic, easeOutElastic, easeInOutElastic
-easeInBack, easeOutBack, easeInOutBack
-easeOutBounce
+`linear` <br>
+`easeInQuad`, `easeOutQuad`, `easeInOutQuad` <br>
+`easeInCubic`, `easeOutCubic`, `easeInOutCubic` <br>
+`easeInQuart`, `easeOutQuart`, `easeInOutQuart` <br>
+`easeInQuint`, `easeOutQuint`, `easeInOutQuint` <br>
+`easeInSine`, `easeOutSine`, `easeInOutSine` <br>
+`easeInExpo`, `easeOutExpo`, `easeInOutExpo` <br>
+`easeInCirc`, `easeOutCirc`, `easeInOutCirc` <br>
+`easeInElastic`, `easeOutElastic`, `easeInOutElastic` <br>
+`easeInBack`, `easeOutBack`, `easeInOutBack` <br>
+`easeOutBounce` <br>
 
 
 ### Example
