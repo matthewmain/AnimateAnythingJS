@@ -23,7 +23,7 @@ Animate any quantitative value by running any of the included animation styles o
 
 ### Example
 
-Say you want to animate just one point of an SVG shape so that it bounces down to a floor, but you want the rest of the shape to remain where it is. Do this by applying the `AJS.EaseOutBounce()` function to stored y-value on a loop set to iterate however many frames you want the animation to have. Pass in four arguments when calling any AnimateAnything easing function: 1) the beginning value, 2) the end value, 3) animation duration (as number of frames), and 4) frames elapsed (as an updated frame count). On each loop, update the animated points specific y value using `.setAttribute()` and concatenating the svg path string.
+Let's use an SVG shape as an example. Say you want to animate just one point of the shape so that it bounces down to a floor, but you want the rest of the shape to remain where it is. Do this by applying the `AJS.EaseOutBounce()` function to a stored y-value on a loop set to iterate however many frames you want the animation to have. Pass in four arguments when calling any AnimateAnything easing function: 1) the beginning value, 2) the end value, 3) animation duration (as number of frames), and 4) frames elapsed (as an updated frame count). On each loop, update the animated points specific y value using `.setAttribute()` and concatenating the svg path string.
 
 ```
 var svgShape = document.getElementById("svg-shape");
