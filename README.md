@@ -52,15 +52,6 @@ function runAnimation() {
 runAnimation();
 ```
 
-<br>
-
-### Delay Option
-
-You can also set a delay before the animation begins. Do this by passing in an optional fifth argument to delay the animation by a specified number of frames. This example will delay the above animation by 10 frames:
-
-```
-animationYValue = AJS.easeOutBounce( 0, 100, animationDurationInFrames, animationCurrentFrame, 10 );
-```
 
 
 
