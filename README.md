@@ -1,33 +1,40 @@
 # AnimateAnythingJS
 
-Animate any quantitative value by running any of the included animation styles on a loop until the animation is complete. Though the library can be used for any value, it's especially useful for animating SVG shapes point-by-point. 
+AnimateAnythingJS is a very lightweight animation library cabable of animating _any_ quantitative value. Though it can be used for common animations on values such as position or size, it's especially useful for animating values that other animation libraries can't easily handle like SVG points or rgb colors. 
 
 <br>
 
 ### Easing Options
-(Visualizations of each animation style can be found [here](https://easings.net/en) for reference.)
+AnimateAnythingJS offers the following easing options as functions. (Visualizations of each animation style can be found [here](https://easings.net/en) for reference.)
 
-`linear` <br>
-`easeInQuad`, `easeOutQuad`, `easeInOutQuad` <br>
-`easeInCubic`, `easeOutCubic`, `easeInOutCubic` <br>
-`easeInQuart`, `easeOutQuart`, `easeInOutQuart` <br>
-`easeInQuint`, `easeOutQuint`, `easeInOutQuint` <br>
-`easeInSine`, `easeOutSine`, `easeInOutSine` <br>
-`easeInExpo`, `easeOutExpo`, `easeInOutExpo` <br>
-`easeInCirc`, `easeOutCirc`, `easeInOutCirc` <br>
-`easeInElastic`, `easeOutElastic`, `easeInOutElastic` <br>
-`easeInBack`, `easeOutBack`, `easeInOutBack` <br>
-`easeOutBounce` <br>
+`.linear()` <br>
+`.easeInQuad()`, `.easeOutQuad()`, `.easeInOutQuad()` <br>
+`.easeInCubic()`, `.easeOutCubic()`, `.easeInOutCubic()` <br>
+`.easeInQuart()`, `.easeOutQuart()`, `.easeInOutQuart()` <br>
+`.easeInQuint()`, `.easeOutQuint()`, `.easeInOutQuint()` <br>
+`.easeInSine()`, `.easeOutSine()`, `.easeInOutSine()` <br>
+`.easeInExpo()`, `.easeOutExpo()`, `.easeInOutExpo()` <br>
+`.easeInCirc()`, `.easeOutCirc()`, `.easeInOutCirc()` <br>
+`.easeInElastic()`, `.easeOutElastic()`, `.easeInOutElastic()` <br>
+`.easeInBack()`, `.easeOutBack()`, `.easeInOutBack()` <br>
+`.easeOutBounce()` <br>
 
 <br>
 
 ### Example
 
-Let's use an SVG shape as an example. Say you want to animate just one point of the shape so that it bounces down to a floor, but you want the rest of the shape to remain where it is. Do this by applying the `AJS.EaseOutBounce()` function to a stored y-value on a loop set to iterate however many frames you want the animation to have. Pass in four arguments when calling any AnimateAnything easing function: 1) the beginning value, 2) the end value, 3) animation duration (as number of frames), and 4) frames elapsed (as an updated frame count). On each loop, update the animated points specific y value using `.setAttribute()` and concatenating the svg path string.
+All AnimateAnythingJS functions require four arguments: 1) the beginning value, 2) the end value, 3) animation duration (as number of frames), and 4) frames elapsed (as an updated frame count). An optional fifth argument can be used to delay the animation's start by a specified number of frames.
+
+```
+AJS.<functionName>( <beginningValue>, <endValue>, <durationInFrames>, <framesElapsed>, <[delayInFrames]> );
+```
+
+Let's use a simple SVG line as an example. Say you want to animate just one point of the line so that it bounces down to a floor, but you want the other point to remain where it is. Do this by applying the `AJS.EaseOutBounce()` function to a stored y-value on a loop set to iterate however many frames you want the animation to have. On each loop, update the target point's y value using `.setAttribute()` and concatenating the svg path string.
+
 
 ```
 var svgShape = document.getElementById("svg-shape");
-var animationYValue;
+var animationYValue = 0;
 var animationDurationInFrames = 60;
 var animationCurrentFrame = 0;
 
