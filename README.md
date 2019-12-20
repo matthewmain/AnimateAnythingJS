@@ -1,6 +1,6 @@
 # AnimateAnythingJS
 
-AnimateAnythingJS is a very lightweight animation library cabable of animating _any_ quantitative value. Though it can be used for any commonly animationed values such as position or size, it's especially useful for animating values that other animation libraries can't easily handle like SVG points or rgb colors. 
+AnimateAnythingJS is a very lightweight animation library cabable of animating _any_ quantitative value. Though it can be used for any commonly animationed values such as positions or sizes, it's especially useful for animating values that other animation libraries can't easily handle like SVG points or rgb colors. 
 
 <br>
 
